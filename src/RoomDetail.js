@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ref, onValue } from 'firebase/database';
-import { database } from './firebase'; // ✅ Import shared database
+import { db as database } from './firebase';
+ // ✅ Import shared database
 
 // Logic to determine status colors/icons
 const getStatusDetails = (room) => {

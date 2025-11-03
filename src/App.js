@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ref, onValue } from 'firebase/database';
 import './App.css';
-import { database } from './firebase'; // ✅ Firebase import moved here
+import { db as database } from './firebase';
+ // ✅ Firebase import moved here
 import RoomDetail from './RoomDetail'; // ✅ Safe to import now
 
 // Main Component: Displays the List of Rooms
