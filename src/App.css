@@ -1,118 +1,84 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f0f2f5;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+/* --- DETAIL PAGE STYLES --- */
+.detail-page-container {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.App-header {
-  background-color: #007aff; 
-  color: white;
-  padding: 20px 40px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #e5e5ea;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
 }
 
-.App-header h1 {
-  margin: 0;
-  font-size: 1.8em;
-  font-weight: 600;
+.back-button:hover {
+    background-color: #d1d1d6;
 }
 
-.room-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 30px;
-  justify-content: center;
+.detail-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
-.room-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 25px;
-  width: 350px;
-  transition: transform 0.2s, box-shadow 0.2s;
+.detail-card h2 {
+    font-size: 2em;
+    margin-top: 0;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 15px;
 }
 
-.room-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+.status-header {
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.room-name {
-  font-size: 1.4em;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #1c1c1e;
-  text-transform: capitalize;
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.room-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+.metric-box {
+    padding: 20px 10px;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
 }
 
-.status-indicator {
-  color: white;
-  padding: 6px 15px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  min-width: 150px;
-  text-align: center;
+.metric-value {
+    font-size: 2.5em;
+    font-weight: 900;
+    display: block;
+    line-height: 1.2;
 }
 
-.occupancy {
-  text-align: right;
+.metric-label {
+    font-size: 0.9em;
+    color: #8e8e93;
+    display: block;
 }
 
-.count-number {
-  font-size: 2.5em;
-  font-weight: 900;
-  color: #007aff;
-  display: block;
-  line-height: 1;
+.lecture-status h3 {
+    color: #007aff;
+    border-bottom: 1px solid #007aff;
+    padding-bottom: 5px;
 }
 
-.count-label {
-  font-size: 0.8em;
-  color: #8e8e93;
-}
-
-.availability-info {
-  font-size: 0.9em;
-  color: #333;
-  padding: 10px 0;
-  border-top: 1px solid #e5e5ea;
-  border-bottom: 1px solid #e5e5ea;
-  margin-bottom: 15px;
-}
-
-.check-seats-button, .free-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.check-seats-button {
-  background-color: #ff9500; 
-  color: white;
-}
-
-.check-seats-button:hover {
-  background-color: #e58700;
-}
-
-.free-button {
-  background-color: #34c759; 
-  color: white;
+.lecture-status p {
+    font-size: 1.1em;
+    line-height: 1.5;
 }
