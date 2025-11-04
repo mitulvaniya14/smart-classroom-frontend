@@ -17,22 +17,22 @@ useEffect(() => {
                 // Convert the Firebase object into an array
                 let roomList = Object.keys(data).map(key => ({
                     id: key,
-                    name: data[key].name || key.replace('_', ' '),
+                    name: data[key].name || key.replace('_', ' '), // This line creates the name
                     ...data[key]
                 }));
 
-                // --- NEW CUSTOM SORTING LOGIC ---
-                // This will sort the array before displaying it
+                // --- UPDATED CUSTOM SORTING LOGIC ---
+                // We now sort by the 'name' field, not the 'id'
                 roomList.sort((a, b) => {
                     // Rule 1: If 'a' is C-013, move it to the front
-                    if (a.id === 'C-013') return -1; 
+                    if (a.name === 'C-013') return -1; 
                     // Rule 2: If 'b' is C-013, move it to the back
-                    if (b.id === 'C-013') return 1;
+                    if (b.name === 'C-013') return 1;
 
-                    // Rule 3: Sort all other rooms alphabetically
-                    return a.id.localeCompare(b.id);
+                    // Rule 3: Sort all other rooms by name
+                    return a.name.localeCompare(b.name);
                 });
-                // --- END NEW LOGIC ---
+                // --- END UPDATED LOGIC ---
 
                 setRooms(roomList); // Set the new, sorted list
             }
@@ -40,7 +40,7 @@ useEffect(() => {
         });
         return () => unsubscribe();
     }, []); // Empty array means this runs only once
-
+    
   const getStatus = (room) => {
     if (room.faculty_present)
       return { text: "Lecture Ongoing", color: "bg-red-500" };
