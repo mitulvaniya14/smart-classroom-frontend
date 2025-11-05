@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 🔹 Smooth scroll for navbar links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🔹 Glow effect for "Shodh" title */
+.glow-text {
+  text-shadow: 0 0 8px rgba(0, 180, 255, 0.6),
+               0 0 14px rgba(0, 120, 255, 0.4);
+}
+
+/* 🔹 Soft hover transitions */
+a,
+button {
+  transition: all 0.25s ease-in-out;
+}
+
+/* 🔹 Optional background animation */
+body {
+  background: radial-gradient(circle at top, #0f172a, #000);
+  color: #fff;
+}
+
+/* 🔹 Card hover shadow glow */
+.card-glow:hover {
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.2);
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
